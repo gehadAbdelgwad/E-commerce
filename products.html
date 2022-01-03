@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <script src="products.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Document</title>
+<link rel="stylesheet" href="home-style.css">
+    <style>
+        .Main { 
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-gap: 5px;
+    margin: 20px;
+
+}
+        .section
+        {
+            width: fit-content; 
+            height: fit-content ; 
+             background-color: rgb(255, 255, 255);
+            border-radius: 10%;
+            max-width: 400px;
+padding: 10px;
+margin: 10px;
+        }
+
+        #btn
+        {
+            background-color: rgb(46, 46, 252);
+             color: white;
+             border-radius: 20%;
+             width: 100px;
+              height: 40px;
+               margin-top: 30px;
+               margin-left: 10px;
+               margin-bottom: 10px;
+        }
+
+        
+    </style>
+    <style>
+        .star-color>i{
+            font-size: 30px;
+        fill: crimson;
+        }
+            </style>
+</head>
+<body style="background-color: rgb(233, 233, 233);" onload="getData()">
+    <div class="grid-container">
+
+  
+
+    <div class="Nav" id="nav_bar" onscroll="nav_scorell()" style="margin-bottom: 8px;">
+        <ul id="nav_ul">
+            <img src="logo.png" width="180px" height="40px" style="border-radius: 10%;
+              position: absolute; padding: 4px; margin-left: 80px;"  >
+ 
+          <li class="nav_li"><a href="login.html"><i class="fas fa-user-plus"></i> Log out</a></li>
+
+          <li class="nav_li"><a href=""><i class="fas fa-file-signature" ></i> contact</a></li>
+          <li class="nav_li"><a href=""> <i class="fas fa-registered"></i> Register</a></li>
+          <li class="nav_li"><a href="home.html"><i class="fas fa-home"></i> home</a></li>
+          <li class="nav_li"><a ><select name="Categ" id="Categ">
+            <option value="electronics"><a href="">Electronics</a> </option>
+            <option value="jewelery"><a href="">jewelery</a></option>
+            <option value="men's clothing"><a href="">men's clothing</a></option>
+            <option value="women's clothing"><a href="">women's clothing</a></option>
+          </select></a></li>
+        </ul>
+      </div>
+
+    <form style="display: none" action="item.html" method="get" id="form">
+        <input type="hidden" name="item" id="item" />
+        <input type="hidden" name="prod-url" id="prod-url" />
+      </form>
+     
+      <div class="Main" id="main">
+    <section id="section" class="section" style="display: none;">
+
+        <span id="span-img">
+            <img src="3.jpg" width="200px" height="200px" style="border-top-left-radius: 10%; border-bottom-left-radius:10% ;" >
+        </span>
+
+        <span   id="prod-data">
+            <h1 >Card Title</h1>
+            <h2>price</h2>
+            <div id="stars" class="star-color" >
+                <i class="fas fa-star" data-clicked="0" data-index="0" class="notfill" class="fill"></i>
+                <i class="fas fa-star" data-clicked="0" data-index="1" class="notfill" class="fill"></i>
+                <i class="fas fa-star" data-clicked="0" data-index="2" class="notfill" class="fill"></i>
+                <i class="fas fa-star" data-clicked="0" data-index="3" class="notfill" class="fill"></i>
+                <i class="fas fa-star" data-clicked="0" data-index="4" class="notfill" class="fill"></i>
+            </div>
+            <br>
+            <button id="btn" type="submit" value="Shop Now" >Shop Now</button>
+        </span>
+        
+    </section>
+</div>
+
+ <div class="Footer">
+        <footer style="margin-top: 100px">
+          <div id="footerDiv">
+            <h1
+              style="
+                color: white;
+                text-align: center;
+                font-family: sans-serif;
+                padding-top: 70px;
+              "
+            >
+              Adress
+            </h1>
+            <hr
+              style="
+                color: white;
+                font-size: 3px;
+                margin-right: 150px;
+                margin-left: 150px;
+                margin-top: 8px;
+              "
+            />
+
+            <h3
+              style="
+                color: white;
+                text-align: center;
+                font-family: sans-serif;
+                padding-top: 30px;
+              "
+            >
+              Cairo - Egypt , 172 Street Marghny-Misr EL-gdida
+            </h3>
+
+            <h4
+              style="
+                color: white;
+                text-align: center;
+                font-family: sans-serif;
+                padding-top: 10pxpx;
+              "
+            >
+              (+20) 01122205544 / 01146734515
+            </h4>
+
+            <h4
+              style="
+                color: white;
+                text-align: center;
+                font-family: sans-serif;
+                padding-top: 10pxpx;
+              "
+            >
+              E-mail : gehadabdelgwad3@gmail.com
+            </h4>
+
+            <center>
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter-square"></i>
+            </center>
+
+            <center>
+              <a href="" class="footerancor">Home</a>
+              <a href="" class="footerancor">About</a>
+              <a href="" class="footerancor">Brand</a>
+              <a href="" class="footerancor">Contact us</a>
+            </center>
+          </div>
+        </footer>
+      </div>
+
+
+    </div>
+</body>
+</html>

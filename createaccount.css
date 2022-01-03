@@ -1,0 +1,79 @@
+#sign_in {
+    margin: auto;
+    width: 60%;
+}
+
+form {
+    background-image: url('');
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+h1{
+    position: static;
+    text-align: center;
+    margin: 0;
+    padding-top: 3%;
+    
+}
+#fname
+{
+    border: 1px solid #ccd0d5;
+    margin-top: 50px;
+    padding: 3px;
+    height: 30px;
+    margin-left: 25%;
+}
+#fname:focus{
+    border: 3px solid blue;
+}
+#lname:focus{
+    border: 3px solid blue;
+}
+
+#lname {
+    
+    border: 1px solid #ccd0d5;
+    margin-top: 50px;
+    padding: 3px;
+    height: 30px;
+
+}
+
+
+p{
+    margin: 0%;
+    margin-left: 25%;
+
+}
+
+.mail,#pass,.date,#cities,#re-pass,#phone_num{
+    border: 1px solid #ccd0d5;
+    margin-left: 25%;
+    width: 350px;
+    padding: 3px;
+    height: 30px;
+}
+#sub{
+    margin: 50px;
+    margin-left: 40%;
+    width: 150px;
+    height: 40px;
+    font-size: 24px;
+}
+h1 a:hover:not(.active){
+    background-color: tomato;
+}
+.active{
+    background-color: tomato;
+
+}
+#rule{
+    border: 1px solid #ccd0d5;
+    margin-left: 25%;
+}
+
+

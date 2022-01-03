@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regester</title>
+
+    <style>
+        #rsgisteration{
+            background-color: rgb(231, 191, 79);
+            margin-left: 35%;
+            margin-top: 15%;
+            text-align: center;
+            position: fixed;
+        }
+        #pass,#email{
+            border: 1px solid #ccd0d5;
+    width: 350px;
+    padding: 3px;
+    height: 30px;
+        }
+     #regstersubmit   {
+        border: 1px solid #ccd0d5;
+    width: 100px;
+    padding: 3px;
+    height: 30px;
+        }
+    </style>
+
+
+<script>
+var email=localStorage.getItem('email')
+var pass=localStorage.getItem('password')
+function compare(e){
+    if (document.getElementById("email").value===email &&document.getElementById("pass").value ===pass) {
+        
+        alert("your info is correct")
+        // document.getElementById("body").onload(compare())
+        
+    }
+    else{
+        alert("your info is not correct please make sure of your email and password ");
+        e.preventDefault();
+
+    }
+    
+    }
+</script>
+</head >
+<body background="bacc.jpg">
+    <form action="home.html" id="rsgisteration" style="border-radius: 10%;">
+        <fieldset style="border-radius: 10%; padding: 20px;">
+            <legend>Log In</legend>
+        <input type="email" placeholder="enter your Email" id="email" style="border-radius: 10%;"  required><br><br>
+        <input type="password" placeholder="your password" id="pass" style="border-radius: 10%;" required><br><br>
+        <input type="submit" id="regstersubmit" value="sign in" style="border-radius: 10%;" onclick="compare(event)" >
+        <a href="create account.html" >createaccount</a>
+
+    </fieldset>
+
+
+    </form>
+</body>
+</html>
